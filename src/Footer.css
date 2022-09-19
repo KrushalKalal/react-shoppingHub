@@ -1,0 +1,38 @@
+.footer_hub{
+    width: 100%;
+    height: auto;
+    background-color: #2c3e50;
+    color: white;
+}
+.footer_link{
+    padding: 40px 5px;
+}
+.footer_link span{
+    margin-left: 32px;
+}
+.footer_link ul{
+    margin-top: 20px;
+}
+.footer_link ul li{
+    list-style: none;
+    margin: 3px 0;
+    font-size: 12px;
+}
+.footer_link ul li a{
+    text-decoration: none;
+    color: white;
+}
+.footer_link ul li a:hover{
+    text-decoration: underline;
+}
+.payment_section{
+    width:100%;
+    padding-bottom: 5px;
+}
+.security_margin{
+    margin: auto;
+}
+hr{
+    margin-left: 25px;
+    width:93%;
+}
