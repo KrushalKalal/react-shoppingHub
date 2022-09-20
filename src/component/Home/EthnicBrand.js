@@ -2,35 +2,35 @@ import React,{Component} from 'react';
 import {Link} from 'react-router-dom';
 import './SummerCollection.css'
 
-const summerUrl = "https://shoppinghub-api.herokuapp.com/imagecollection?collectionId=7"
+const ethnicUrl = "https://shoppinghub-api.herokuapp.com/imagecollection?collectionId=11"
 
 
-class SummerCollection extends Component{
+class EthnicBrand extends Component{
     constructor(props){
         super(props)
 
         this.state={
-            summer_img:[]
+            ethnic_img:[]
         }
     }
 
 
 
     render(){
-         console.log(this.state.summer_img)
+         console.log(this.state.ethnic_img)
 
         return(
             <section class="product_card">
               <div>
-               <h2>FRESH SUMMER STYLES TO OWN</h2>
+               <h2>GRACEFUL ETHNICWEAR</h2>
               </div>
              <div class="row">
              
                 {
-                    this.state.summer_img.map(data => (
+                    this.state.ethnic_img.map(data => (
                         <div class="col-lg-3 product_image">
                         <Link to={`/listing/${data.brand_id}`} key={data._id}>
-                          <img src={data.img} alt="summer collection"/>
+                          <img src={data.img} alt="Ethnic Wera"/>
                         </Link>
                         </div>
                         
@@ -43,12 +43,12 @@ class SummerCollection extends Component{
     }
 
     componentDidMount(){
-        fetch(summerUrl,{method:'GET'})
+        fetch(ethnicUrl,{method:'GET'})
         .then((res) => res.json())
         .then((data)=>{
-            this.setState({summer_img:data})
+            this.setState({ethnic_img:data})
         })
     }
 }
 
-export default SummerCollection 
+export default EthnicBrand 

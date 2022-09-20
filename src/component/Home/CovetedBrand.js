@@ -2,35 +2,35 @@ import React,{Component} from 'react';
 import {Link} from 'react-router-dom';
 import './SummerCollection.css'
 
-const summerUrl = "https://shoppinghub-api.herokuapp.com/imagecollection?collectionId=7"
+const covetedUrl = "https://shoppinghub-api.herokuapp.com/imagecollection?collectionId=8"
 
 
-class SummerCollection extends Component{
+class CovetedBrand extends Component{
     constructor(props){
         super(props)
 
         this.state={
-            summer_img:[]
+            coveted_img:[]
         }
     }
 
 
 
     render(){
-         console.log(this.state.summer_img)
+         console.log(this.state.coveted_img)
 
         return(
             <section class="product_card">
               <div>
-               <h2>FRESH SUMMER STYLES TO OWN</h2>
+               <h2>COVETED BRAND DEALS</h2>
               </div>
              <div class="row">
              
                 {
-                    this.state.summer_img.map(data => (
+                    this.state.coveted_img.map(data => (
                         <div class="col-lg-3 product_image">
                         <Link to={`/listing/${data.brand_id}`} key={data._id}>
-                          <img src={data.img} alt="summer collection"/>
+                          <img src={data.img} alt="coveted brand"/>
                         </Link>
                         </div>
                         
@@ -43,12 +43,12 @@ class SummerCollection extends Component{
     }
 
     componentDidMount(){
-        fetch(summerUrl,{method:'GET'})
+        fetch(covetedUrl,{method:'GET'})
         .then((res) => res.json())
         .then((data)=>{
-            this.setState({summer_img:data})
+            this.setState({coveted_img:data})
         })
     }
 }
 
-export default SummerCollection 
+export default CovetedBrand 

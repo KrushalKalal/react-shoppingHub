@@ -19,3 +19,32 @@
     width: 100%;
     margin-left: 10px;
 }
+
+.premium_brands{
+    height:auto;
+    width: 100%;
+    margin-bottom: 40px;
+}
+.premium_brands div>h2{
+    text-align: center;
+    color: var(--gender-color);
+    font-style: italic;
+}
+.premium_brands, .row{
+    width: 100%;
+}
+.brand_img{
+    width: 25%;
+}
+.brand_img img{
+    width: 100%;
+    margin-left: 10px;
+}
+
+.footwear_image{
+    width: 100%;
+}
+.footwear_image img{
+    width: 100%;
+    margin-left: 10px;
+}

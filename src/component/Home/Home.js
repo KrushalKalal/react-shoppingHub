@@ -6,6 +6,10 @@ import HimCarousel from './HimCarousel';
 import WalletCarousel from './WalletCarousel';
 import ProductCarousel from './ProductCarousel';
 import SummerCollection from './SummerCollection';
+import CovetedBrand from './CovetedBrand';
+import EthnicBrand from './EthnicBrand';
+import PremiumBrand from './PremiumBrand';
+
 import './Home.css'
 
 class Home extends Component{
@@ -17,8 +21,12 @@ class Home extends Component{
                 <HerCarousel/>
                 <SummerCollection/>
                 <HimCarousel/>
+                <CovetedBrand/>
                 <WalletCarousel/>
                 <ProductCarousel/>
+                <EthnicBrand/>
+                <PremiumBrand/>
+               
             </div>
         )
     }  
