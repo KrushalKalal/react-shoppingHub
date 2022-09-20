@@ -2,9 +2,9 @@ import React,{Component} from 'react';
 import {Link} from 'react-router-dom';
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import './Home.css'
 
-const mainUrl = "https://shoppinghub-api.herokuapp.com/imagecollection?collectionId=1"
+
+const discountUrl = "https://shoppinghub-api.herokuapp.com/imagecollection?collectionId=13"
 
 const responsive = {
     desktop: {
@@ -21,19 +21,19 @@ const responsive = {
     }
   };
 
-class MainCarousel extends Component{
+class DiscountCarousel extends Component{
     constructor(props){
         super(props)
 
         this.state={
-            main_img:[]
+            discount_img:[]
         }
     }
 
 
 
     render(){
-         console.log(this.state.main_img)
+         console.log(this.state.discount_img)
 
         return(
             <div className='home_header'>
@@ -46,13 +46,9 @@ class MainCarousel extends Component{
                        autoPlay={false}
                        autoPlaySpeed={3000}>
                 {
-                    this.state.main_img.map(data => (
-                        <Link to={`/listing/${data.brand_id}`} key={data._id}>
-                          <img src={data.img} alt="main_carousel" className="carousel_img"/>
-                        </Link>
-                        
-                        
-                    ))
+                    this.state.discount_img.map(data => (
+                          <img src={data.img} alt="discount_carousel"/>
+                       ))
                 }
               </Carousel>
             </div>
@@ -60,12 +56,12 @@ class MainCarousel extends Component{
     }
 
     componentDidMount(){
-        fetch(mainUrl,{method:'GET'})
+        fetch(discountUrl,{method:'GET'})
         .then((res) => res.json())
         .then((data)=>{
-            this.setState({main_img:data})
+            this.setState({discount_img:data})
         })
     }
 }
 
-export default MainCarousel
+export default DiscountCarousel

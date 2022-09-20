@@ -4,7 +4,7 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import './Home.css'
 
-const mainUrl = "https://shoppinghub-api.herokuapp.com/imagecollection?collectionId=1"
+const himUrl = "https://shoppinghub-api.herokuapp.com/imagecollection?collectionId=3"
 
 const responsive = {
     desktop: {
@@ -21,19 +21,19 @@ const responsive = {
     }
   };
 
-class MainCarousel extends Component{
+class HimCarousel extends Component{
     constructor(props){
         super(props)
 
         this.state={
-            main_img:[]
+            him_img:[]
         }
     }
 
 
 
     render(){
-         console.log(this.state.main_img)
+         console.log(this.state.him_img)
 
         return(
             <div className='home_header'>
@@ -46,9 +46,9 @@ class MainCarousel extends Component{
                        autoPlay={false}
                        autoPlaySpeed={3000}>
                 {
-                    this.state.main_img.map(data => (
+                    this.state.him_img.map(data => (
                         <Link to={`/listing/${data.brand_id}`} key={data._id}>
-                          <img src={data.img} alt="main_carousel" className="carousel_img"/>
+                          <img src={data.img} alt="her_carousel"/>
                         </Link>
                         
                         
@@ -60,12 +60,12 @@ class MainCarousel extends Component{
     }
 
     componentDidMount(){
-        fetch(mainUrl,{method:'GET'})
+        fetch(himUrl,{method:'GET'})
         .then((res) => res.json())
         .then((data)=>{
-            this.setState({main_img:data})
+            this.setState({him_img:data})
         })
     }
 }
 
-export default MainCarousel
+export default HimCarousel

@@ -1,0 +1,21 @@
+.product_card{
+    height:auto;
+    width: 100%;
+    margin-bottom: 40px;
+}
+.product_card div>h2{
+    text-align: center;
+    color: var(--gender-color);
+    font-style: italic;
+}
+.product_card .row {
+    width: 100%;
+}
+.product_image{
+    width: 25%;
+}
+
+.product_image img{
+    width: 100%;
+    margin-left: 10px;
+}
