@@ -9,6 +9,10 @@ import SummerCollection from './SummerCollection';
 import CovetedBrand from './CovetedBrand';
 import EthnicBrand from './EthnicBrand';
 import PremiumBrand from './PremiumBrand';
+import Footwear from './Footewear';
+import Unmissable from './Unmissable';
+import Extraoff from './Extraoff';
+import Flatoff from './Flatoff';
 
 import './Home.css'
 
@@ -18,15 +22,18 @@ class Home extends Component{
             <div >
                 <MainCarousel/>
                 <DiscountCarousel/>
+                <Extraoff/>
                 <HerCarousel/>
                 <SummerCollection/>
                 <HimCarousel/>
                 <CovetedBrand/>
                 <WalletCarousel/>
+                <Unmissable/>
+                <Flatoff/>
                 <ProductCarousel/>
                 <EthnicBrand/>
                 <PremiumBrand/>
-               
+                <Footwear/>
             </div>
         )
     }  

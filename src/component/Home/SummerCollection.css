@@ -15,10 +15,23 @@
     width: 25%;
 }
 
+.product_card .offer-carousel{
+    width: 100%;
+}
+.product_image_unmissable{
+    width: 100%;
+}
+
+.product_image_unmissable img{
+    width: 100%;
+} 
+
 .product_image img{
     width: 100%;
     margin-left: 10px;
 }
+
+
 
 .premium_brands{
     height:auto;
@@ -40,11 +53,37 @@
     width: 100%;
     margin-left: 10px;
 }
-
+.footwear_card{
+    height:auto;
+    width: 100%;
+    margin-bottom: 40px;
+}
+.footwear_card div>h2{
+    text-align: center;
+    color: var(--gender-color);
+    font-style: italic;
+}
+.footwear_card .img-carousel{
+    width: 100%;
+}
 .footwear_image{
     width: 100%;
 }
 .footwear_image img{
     width: 100%;
     margin-left: 10px;
+}
+
+.extra_offer_card .offer-carousel{
+    height: auto;
+    width: 100%;
+}
+.offer_image{
+    width:100%;
+}
+.offer_image img{
+    width: 100%;
+    margin-left: 10px;
+    border: 1px solid var(--offerborder-color);
+    margin-bottom: 40px;
 }

@@ -1,4 +1,6 @@
 import React,{Component} from 'react';
+import {Link} from 'react-router-dom';
+import ListingComponent from './component/Listing/ListingComponent';
 import './Header.css';
 
 class Header extends Component{
@@ -7,7 +9,7 @@ class Header extends Component{
             <section class="navbar_section">
              <nav class="navbar fixed-top navbar-expand-lg bg-light">
                 <div class="container-fluid">
-                    <img src="https://i.ibb.co/K7dJDR5/hublogo.png" alt="logo"/>
+                    <Link to="/"> <img src="https://i.ibb.co/K7dJDR5/hublogo.png" alt="logo"/></Link>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
                      <span class="navbar-toggler-icon"></span>
                     </button>
