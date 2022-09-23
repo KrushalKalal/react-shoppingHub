@@ -2,7 +2,7 @@ import React,{Component} from 'react';
 import {Link} from 'react-router-dom';
 import './SummerCollection.css'
 
-const covetedUrl = "https://shoppinghub-api.herokuapp.com/imagecollection?collectionId=8"
+const covetedUrl = "https://shoppinghubapi.herokuapp.com/api/imagecollection?collectionId=8"
 
 
 class CovetedBrand extends Component{

@@ -2,7 +2,7 @@ import React,{Component} from 'react';
 import {Link} from 'react-router-dom';
 import './SummerCollection.css'
 
-const ethnicUrl = "https://shoppinghub-api.herokuapp.com/imagecollection?collectionId=11"
+const ethnicUrl = "https://shoppinghubapi.herokuapp.com/api/imagecollection?collectionId=11"
 
 
 class EthnicBrand extends Component{

@@ -4,7 +4,7 @@ import Filter from './Filter'
 import ProductList from './ProductList';
 import './ProductList.css'
 
-const productList = "https://shoppinghub-api.herokuapp.com/products?brandId="
+const productList = "https://shoppinghubapi.herokuapp.com/api/productList?brandId="
 
 class ListingComponent extends Component{
     constructor(props){

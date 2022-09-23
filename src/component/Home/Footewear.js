@@ -5,7 +5,7 @@ import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';  
 import './SummerCollection.css';
 
-const footwearUrl = "https://shoppinghub-api.herokuapp.com/imagecollection?collectionId=12"
+const footwearUrl = "https://shoppinghubapi.herokuapp.com/api/imagecollection?collectionId=12"
 
 class Footwear extends Component{
     constructor(props){

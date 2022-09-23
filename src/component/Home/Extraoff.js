@@ -5,7 +5,7 @@ import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';  
 import './SummerCollection.css';
 
-const extraoffUrl = "https://shoppinghub-api.herokuapp.com/imagecollection?collectionId=5"
+const extraoffUrl = "https://shoppinghubapi.herokuapp.com/api/imagecollection?collectionId=5"
 
 class Extraoff extends Component{
     constructor(props){

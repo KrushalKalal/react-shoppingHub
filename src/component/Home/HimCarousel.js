@@ -4,7 +4,7 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import './Home.css'
 
-const himUrl = "https://shoppinghub-api.herokuapp.com/imagecollection?collectionId=3"
+const himUrl = "https://shoppinghubapi.herokuapp.com/api/imagecollection?collectionId=3"
 
 const responsive = {
     desktop: {

@@ -5,7 +5,7 @@ import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';  
 import './SummerCollection.css';
 
-const flatoffUrl = "https://shoppinghub-api.herokuapp.com/imagecollection?collectionId=6"
+const flatoffUrl = "https://shoppinghubapi.herokuapp.com/api/imagecollection?collectionId=6"
 
 class Flatoff extends Component{
     constructor(props){

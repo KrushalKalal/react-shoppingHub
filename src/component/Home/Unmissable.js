@@ -5,7 +5,7 @@ import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';  
 import './SummerCollection.css';
 
-const unmissableUrl = "https://shoppinghub-api.herokuapp.com/imagecollection?collectionId=10"
+const unmissableUrl = "https://shoppinghubapi.herokuapp.com/api/imagecollection?collectionId=10"
 
 class Unmissable extends Component{
     constructor(props){
