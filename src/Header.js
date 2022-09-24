@@ -3,7 +3,57 @@ import {Link} from 'react-router-dom';
 import ListingComponent from './component/Listing/ListingComponent';
 import './Header.css';
 
+const url = "https://shoppinghubapi.herokuapp.com/api/auth/userInfo"
+
+
 class Header extends Component{
+
+  constructor(props){
+    super(props)
+
+    this.state={
+        userData:'',
+        username:'',
+        userImg:''
+    }
+}
+
+handleLogout = () => {
+    sessionStorage.removeItem('ltk')
+    sessionStorage.removeItem('userInfo')
+    sessionStorage.setItem('loginStatus','LoggedOut')
+    this.setState({userData: '' })
+    this.props.history.push('/')
+
+}
+
+
+conditionalHeader = () => {
+    if(this.state.userData.name){
+        let data = this.state.userData;
+        let outputArray = [data.name,data.email,data.phone];
+        sessionStorage.setItem('userInfo',outputArray);
+        sessionStorage.setItem('loginStatus','LoggedIn')
+        return(
+            <>
+               <li><Link className="btn" to="/logIn">Hi {data.name}</Link></li>
+                <button className="btn btn-danger" onClick={this.handleLogout}>
+                    <span className="glyphicon glyphicon-log-out"></span>  Logout   
+                </button> 
+            </>
+        )
+
+    }else{
+        return(
+            <>
+                <li><Link className="btn" to="/logIn">Log in</Link></li>
+                <li><Link className="btn" to="/Register">Sign up</Link></li>
+            </>
+        )
+    }
+}
+
+  
     render(){
         return(
             <section class="navbar_section">
@@ -44,19 +94,10 @@ class Header extends Component{
                    </ul>
  
                      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                         <li class="nav-item">
-                             <a class="nav-link" href="#">Sign In/ Join Us</a>
-                         </li>
-                         <li class="nav-item">
-                             <a class="nav-link" href="#">Customer Care</a>
-                         </li>
+                         {this.conditionalHeader()}
                      </ul>
  
-                     <ul class="navbar-nav">
-                       <li class="nav-item">
-                         <i class="fa-solid fa-lightbulb theme"></i>
-                       </li>
-                   </ul>
+                    
                     
                    </div>
                 </div>
@@ -64,6 +105,22 @@ class Header extends Component{
          </section>
         )
     }
+    componentDidMount(){
+        
+      fetch(url,{
+          method: 'GET',
+          headers:{
+              'x-access-token':sessionStorage.getItem('ltk')
+          }
+      })
+      .then((res) => res.json())
+      .then((data) => {
+          this.setState({
+              userData:data
+          })
+      })
+  }
+  
 }
 
 export default Header

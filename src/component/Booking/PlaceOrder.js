@@ -6,18 +6,21 @@ const orderUrl = "https://shoppinghubapi.herokuapp.com/api/placeOrder"
 
 class PlaceOrder extends Component{
 
+    
+
     constructor(props){
         super(props)
 
+        let sessionData = sessionStorage.getItem('userInfo')?sessionStorage.getItem('userInfo').split(','):[]
+
         this.state={
             order_id:Math.floor(Math.random()*10000),
-            restaurant_name:this.props.match.params.restName,
-            name:'Ankit',
-            email:'ankit@gmail.com',
+            name:sessionData?sessionData[0]:'',
+            email:sessionData?sessionData[1]:'',
             cost:0,
-            phone:9876543210,
+            phone:sessionData?sessionData[2]:'',
             address:'IT 98 Delhi',
-            productItem:''
+            productItem:[]
         }
     }
 
@@ -26,7 +29,7 @@ class PlaceOrder extends Component{
     }
 
     checkout = () => {
-        let orderId = [];
+        let orderId = []
         let obj = this.state;
         obj.productItem = sessionStorage.getItem('product');
         obj.productItem.split(',').map((item) => {
@@ -42,7 +45,8 @@ class PlaceOrder extends Component{
             },
             body:JSON.stringify(obj)
         })
-        .then(this.props.history.push('/viewOrder'))
+        //.then(this.props.history.push('/viewOrder'))
+        .then(console.log('order added'))
     }
     
 
@@ -62,8 +66,24 @@ class PlaceOrder extends Component{
         }
     }
 
+
     render(){
-        console.log(this.state.productItem)
+        let productsItem = sessionStorage.getItem('product');
+        let orderId = [];
+        productsItem.split(',').map((item) => {
+            orderId.push(parseInt(item));
+            return 'ok'
+        })
+        console.log(orderId)
+        if(sessionStorage.getItem('loginStatus') === 'LoggedOut'){
+            return(
+                <div>
+                    <center>
+                        <h2>Login First To Place Order</h2>
+                    </center>
+                </div>
+            )
+        }
         return(
             <>
                 <div className="container">
@@ -72,8 +92,12 @@ class PlaceOrder extends Component{
                             Employee
                         </div>
                         <div className="panel-body">
-                            <form>
+                            <form action="https://developerpayment.herokuapp.com/paynow" method="POST">
                                 <div className="row">
+                                   <input type="hidden" name="cost" value={this.state.cost}/>
+                                    <input type="hidden" name="order_id" value={this.state.order_id}/>
+                                    <input type="hidden" name="productItem" value={this.orderId}/>
+                                    
                                     <div className="form-group col-md-6">
                                         <label for="fname" className="control-label">FirstName</label>
                                         <input className="form-control" id="fname" name="name" value={this.state.name}
@@ -101,7 +125,7 @@ class PlaceOrder extends Component{
                                         <h2>Total Price is Rs.{this.state.cost}</h2>
                                     </div>
                                 </div>
-                                <button className="btn btn-success" onClick={this.checkout}>PlaceOrder</button>
+                                <button className="btn btn-success" type='submit' onClick={this.checkout}>PlaceOrder</button>
                                 
                             </form>
                         </div>
