@@ -2,10 +2,10 @@
     border:2px solid white;
     background-color: white;
     border-radius: 3px;
-    height: 210vh;
+    
     width:19%;
     margin:0 15px;
-    padding: 15px;
+    
     color:rgb(90, 87, 87);
     box-shadow: 0 3px 8px 0 rgb(0 0 0 / 10%);
 }
@@ -50,4 +50,32 @@
 }
 .more_color{
     color: rgb(231, 79, 95);
+}
+
+.filter_gender, .filter_price, .filter_category, .filter_size, .filter_brand, .filter_discount, .filter_occation, .filter_color span{
+    margin-bottom: 3%;
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+    
+    .filter_gender, .filter_price, .filter_category, .filter_size, .filter_brand, .filter_discount, .filter_occation, .filter_color, input{
+        font-size: 12px;
+    }
+    .filter{
+        width: 100%;
+    }
+
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .filter_gender, .filter_price, .filter_category, .filter_size, .filter_brand, .filter_discount, .filter_occation, .filter_color, input{
+        font-size: 13px;
+    }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1440px){
+   
+   
+
 }

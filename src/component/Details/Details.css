@@ -1,70 +1,99 @@
-#mainContent{
-    width:90%;
-    margin-left:5%;
-    margin-top:2%;
-    display: inline-block;
-    padding-top: 65px;
+
+
+.deatails_container{
+    padding-top: 85px;
 }
-.imgDiv{
-    height:400px;
-    width:40%;
-    float: left;
-    border:5px groove gray
-}
-.imgDiv > img {
-    height:400px;
-    width:100%; 
-}
-.contentDiv{
-    width:55%;
-    margin-left:2%;
-    float: left;
-    margin-top: -2%;
-}
-.feature_container{
-    width:100%;
-    display: inline-block;
-}
-figure{
-    float: left;
-    margin-left:5%;
+.deatails_container .row{
+    width: 100%;
 }
 
-.featureIcon{
-    height:100px;
-    width:100px;
-}
-.imgIcon{
-    height:100px;
-    width:100px;
-    margin-left:2%
-}
-h2{
-    font-size: 35px;
-    color:green;
-}
-.fa-amazon{
-    font-size:25px;
-    color:orange
-}
-.checked{
-    color:red
-}
-.btn1{
-    color:white;
-    margin-left:1%
+
+
+.details_images{
+    margin-left: 18%;
+    width: 32%;
+    height: 70vh;
+    border: 3px solid darkkhaki;
 }
 
-.btn-proceed{
-    height:50px;
-    width:200px;
-    font-size:20px;
-    background-color:rgb(144, 145, 235)
+.details_images img{
+    height: 69vh;
+    width: 100%;
 }
 
-.btn-back{
-    height:50px;
-    width:200px;
-    font-size:20px;
-    background-color:rgb(237, 120, 120)
+.details_data{
+    margin-left: 10%;
+}
+
+.brand_details{
+    margin-left: 15%;
+    font-size: 34px;
+    color: #b39969;
+    font-weight: 500;
+}
+
+.description_details{
+    font-size: 15px;
+    margin-left: 11%;
+}
+
+.price_details{
+    font-size: 20px;
+    margin-left: 19%;
+    font-weight: 700;
+    margin-top: 1%;
+}
+.discount_details{
+    margin-left: 13%;
+    margin-top: -1%;
+    font-size: 14px;
+}
+
+.color_details{
+    font-size: 18px;
+    margin-left: 14%;
+    margin-top: 1%;
+}
+
+.size_details{
+    font-size: 18px;
+    margin-left: 17%;
+}
+
+.cart_btn{
+    background-color: #d3c555;
+    color: white;
+    width: 48%;
+    margin-top: 3%;
+    margin-left: 0%;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.proceed_btn{
+    margin-top: 3%;
+    background-color: #448183;
+    color: white;
+    width: 21%;
+    font-weight: 700;
+}
+
+.back_btn{
+    margin-top: 3%;
+    background-color: #703e5d;
+    color: white;
+    width: 21%;
+    font-weight: 700;
+    margin-left: 5%;
+}
+
+.about_brand{
+    margin-top: 6%;
+    background-color: #5b9f78;
+    font-size: 16px;
+    padding: 4%;
+    margin-left: -23%;
+    color: white;
+    width: 98%;
+    font-weight: 700;
 }

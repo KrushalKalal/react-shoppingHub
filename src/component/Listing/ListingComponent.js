@@ -29,7 +29,7 @@ class ListingComponent extends Component{
          <>
          <section class="container-fluid listing_content">
              <div class="row">
-                 <div class="col-lg-3 filter">
+                 <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 filter">
                   <div class="filters">
                      <div class="title">
                        <span>Shopping Hub</span>
@@ -55,7 +55,7 @@ class ListingComponent extends Component{
                    </div>
                  </div>
                 
-                 <div class="col-lg-9 content">
+                 <div class="col-lg-9 col-lg-9 col-md-9 col-sm-12 col-xs-12 content">
                     
                        <ProductList productData={this.state.products}/>
                     

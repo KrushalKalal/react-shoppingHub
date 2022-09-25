@@ -13,8 +13,8 @@
  }
  .postion_search{
      position: absolute;
-     top: 29.5px;
-     left: 48%;
+     top: 25.5px;
+     left: 37%;
      color:black;
  }
  /* .theme{
@@ -31,7 +31,7 @@
    }
    .postion_search{
     top: 37%;
-    left: 56%;
+    left: 47%;
     font-size: 16px;
 }
 }
@@ -39,7 +39,7 @@
 @media only screen and (min-width: 1025px) and (max-width:1180px){
     .postion_search{
         top: 37%;
-        left: 53%;
+        left: 47%;
         font-size: 16px;
     }
  }
@@ -47,7 +47,7 @@
  @media only screen and (min-width: 1134px) and (max-width:1240px){
     .postion_search{
         top: 37%;
-        left: 50%;
+        left: 43%;
     }
  }
 @media only screen and (min-width: 1025px) and (max-width:1179px){
@@ -56,7 +56,7 @@
     }
     .postion_search{
         top: 37%;
-        left: 57%;
+        left: 47%;
         font-size: 16px;
     }
  }

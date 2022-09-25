@@ -1,0 +1,49 @@
+.container{
+    padding-top: 65px;
+}
+.login_form{
+    width: 42%;
+    margin-left: 29%;
+    height: 45vh;
+    margin-top: 5%;
+    background-color: #2c3e50;
+    padding-top: 3%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.register_form{
+    width: 42%;
+    margin-left: 29%;
+    height: 56vh;
+    margin-top: 2%;
+    background-color: #2c3e50;
+    padding-top: 1%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.login_heading{
+    font-size: 30px;
+    text-align: center;
+    color: wheat;
+}
+
+.register_heading{
+    font-size: 30px;
+    text-align: center;
+    color: wheat; 
+}
+.login_input{
+    margin-bottom: 3%;
+}
+.login_input label{
+    color: wheat;
+}
+.login_btn{
+    margin-top: 6%;
+    width: 20%;
+    margin-left: 41%;
+    color: black;
+    background-color: wheat;
+}
