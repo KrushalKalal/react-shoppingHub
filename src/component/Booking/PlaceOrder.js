@@ -20,7 +20,7 @@ class PlaceOrder extends Component{
             cost:0,
             phone:sessionData?sessionData[2]:'',
             address:'IT 98 Delhi',
-            productItem:[]
+            productItem:'',
         }
     }
 
@@ -29,14 +29,9 @@ class PlaceOrder extends Component{
     }
 
     checkout = () => {
-        let orderId = []
         let obj = this.state;
         obj.productItem = sessionStorage.getItem('product');
-        obj.productItem.split(',').map((item) => {
-            orderId.push(parseInt(item));
-            return 'ok'
-        })
-        obj.productItem = orderId
+        console.log(obj.productItem)
         fetch(orderUrl,{
             method: 'POST',
             headers: {
@@ -62,19 +57,15 @@ class PlaceOrder extends Component{
                         <h4>Rs. {item.price}</h4>
                     </div>
                 )
+              
             })
+            
         }
     }
 
 
+
     render(){
-        let productsItem = sessionStorage.getItem('product');
-        let orderId = [];
-        productsItem.split(',').map((item) => {
-            orderId.push(parseInt(item));
-            return 'ok'
-        })
-        console.log(orderId)
         if(sessionStorage.getItem('loginStatus') === 'LoggedOut'){
             return(
                 <div>
@@ -96,7 +87,6 @@ class PlaceOrder extends Component{
                                 <div className="row">
                                    <input type="hidden" name="cost" value={this.state.cost}/>
                                     <input type="hidden" name="order_id" value={this.state.order_id}/>
-                                    <input type="hidden" name="productItem" value={this.orderId}/>
                                     
                                     <div className="form-group col-md-6">
                                         <label for="fname" className="control-label">FirstName</label>

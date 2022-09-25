@@ -44,9 +44,9 @@ const ProductList = (props) => {
         }
     }
     return(
-        <div>
+        <div class="row">
             {listProduct(props)}
-        </div>
+         </div>
     )
 }
 
