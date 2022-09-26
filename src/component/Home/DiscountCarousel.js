@@ -36,7 +36,7 @@ class DiscountCarousel extends Component{
          console.log(this.state.discount_img)
 
         return(
-            <div className='home_header'>
+            <div>
               <Carousel 
                        responsive={responsive}
                        swipeable={true}

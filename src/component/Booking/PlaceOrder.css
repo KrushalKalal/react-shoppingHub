@@ -10,3 +10,50 @@
    height:200px;
    width:100%
 }
+.order_cart{
+    background-color: #dcdfe3;
+    padding-top: 11% !important;
+    height: 70vh;
+}
+.orderDetails{
+    border:3px solid white;
+    background-color: white;
+    border-radius: 3px;
+    margin-left: 4%;
+    color:rgb(90, 87, 87);
+    box-shadow: 0 3px 8px 0 rgb(0 0 0 / 10%);
+}
+
+.order_card img{
+    width: 100%;
+}
+.order_desc{
+    margin-top: 8%;
+}
+.order_cost{
+   margin-left: 1%;
+    box-shadow: 0 3px 8px 0 rgb(0 0 0 / 10%);
+    width: 35%;
+    border:2px solid white;
+    background-color: white;
+    border-radius: 3px;
+    height: 40vh;
+}
+.cost_detail h2{
+    margin-top: 3%;
+    margin-left: 22%;
+    color: #977840;
+}
+.order_heading{
+    font-size: 30px;
+    text-align: center;
+    color: #977840; 
+}
+
+.order_btn{
+    margin-top: 6%;
+    width: 20%;
+    margin-left: 37%;
+    color: black;
+    background-color: wheat;
+}

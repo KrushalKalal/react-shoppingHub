@@ -80,6 +80,7 @@ class Details extends Component {
 
     async componentDidMount(){
         let productId = this.props.location.search.split('=')[1];
+        sessionStorage.setItem('productId',productId)
         let response = await axios.get(`${ProductUrl}/${productId}`)
         this.setState({details:response.data})
     }

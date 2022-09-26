@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import { Link } from 'react-router-dom';
 import './PlaceOrder.css';
 
 const url = "https://shoppinghubapi.herokuapp.com/api/productItem";
@@ -21,6 +22,7 @@ class PlaceOrder extends Component{
             phone:sessionData?sessionData[2]:'',
             address:'IT 98 Delhi',
             productItem:'',
+            productId:sessionStorage.getItem('productId')
         }
     }
 
@@ -40,32 +42,34 @@ class PlaceOrder extends Component{
             },
             body:JSON.stringify(obj)
         })
-        //.then(this.props.history.push('/viewOrder'))
-        .then(console.log('order added'))
+        .then(this.props.history.push('/viewOrder'))
+        //.then(console.log('order added'))
     }
     
-
- 
-
-    renderItem = (data) => {
+     renderDetails = (data) => {
         if(data){
             return data.map((item) => {
                 return(
-                    <div className="orderItems" key={item.product_id}>
-                        <img src={item.img} alt={item.brands[0].brand_name}/>
-                        <h3>{item.brands[0].brand_name}</h3>
-                        <h4>Rs. {item.price}</h4>
+                    <div className="col-lg-7 col-md-7 col-sm-7 col-xs-12 orderDetails" key={item.product_id}>
+                          <div className="row">
+                            <div className="col-lg-3 col-md-3 col-sm-3 col-xs-3 order_card">
+                                <img src={item.img} alt={item.brands[0].brand_name}/>
+                            </div>
+                            <div className="col-lg-9 col-md-9 col-sm-9 col-xs-9 order_desc">
+                                <h3>{item.brands[0].brand_name}'s {item.decription} ({item.color[0].color_name})</h3>
+                                <h3>Seller : RetailNet</h3>
+                                <h4>Rs. {item.price} ({item.discount[0].discount_type})</h4>
+                                <Link to={`/details?productId=${this.state.productId}`} className='btn btn-danger'>Back</Link>
+                            </div>
+                          </div>
                     </div>
                 )
-              
             })
-            
         }
-    }
-
-
+     }
 
     render(){
+        console.log(this.state.productId)
         if(sessionStorage.getItem('loginStatus') === 'LoggedOut'){
             return(
                 <div>
@@ -76,49 +80,51 @@ class PlaceOrder extends Component{
             )
         }
         return(
+
             <>
-                <div className="container">
-                    <div className="panel panel-primary">
-                        <div className="panel-heading">
-                            Employee
+                <div className="order_cart">
+                    <div className="row">
+                        {this.renderDetails(this.state.productItem)}
+                    <div className="col-lg-5 col-md-5 col-sm-5 col-xs-12 order_cost">
+                    <div className="order_cost_card">
+                        <div className="order_heading">
+                            User Info
                         </div>
-                        <div className="panel-body">
-                            <form action="https://developerpayment.herokuapp.com/paynow" method="POST">
+                        <div className="order_body">
+                            <form>
                                 <div className="row">
-                                   <input type="hidden" name="cost" value={this.state.cost}/>
-                                    <input type="hidden" name="order_id" value={this.state.order_id}/>
-                                    
-                                    <div className="form-group col-md-6">
+                                    <div className="form-group col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                         <label for="fname" className="control-label">FirstName</label>
                                         <input className="form-control" id="fname" name="name" value={this.state.name}
                                         onChange={this.handleChange}/>
                                     </div>
-                                    <div className="form-group col-md-6">
+                                    <div className="form-group col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                         <label for="email" className="control-label">Email</label>
                                         <input className="form-control" name="email" value={this.state.email}
                                         onChange={this.handleChange}/>
                                     </div>
-                                    <div className="form-group col-md-6">
+                                    <div className="form-group col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                         <label for="phone" className="control-label">Phone</label>
                                         <input className="form-control" name="phone" value={this.state.phone}
                                         onChange={this.handleChange}/>
                                     </div>
-                                    <div className="form-group col-md-6">
+                                    <div className="form-group col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                         <label for="address" className="control-label">Address</label>
                                         <input className="form-control" name="address" value={this.state.address}
                                         onChange={this.handleChange}/>
                                     </div>
                                 </div>
-                                {this.renderItem(this.state.productItem)}
                                 <div className="row">
-                                    <div className="col-md-12">
+                                    <div className="col-md-12 cost_detail">
                                         <h2>Total Price is Rs.{this.state.cost}</h2>
                                     </div>
                                 </div>
-                                <button className="btn btn-success" type='submit' onClick={this.checkout}>PlaceOrder</button>
+                                <button className="btn order_btn"  onClick={this.checkout}>PlaceOrder</button>
                                 
                             </form>
                         </div>
+                    </div>
+                    </div>
                     </div>
                 </div>
             </>

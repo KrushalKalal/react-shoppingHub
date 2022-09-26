@@ -19,7 +19,7 @@ import './Home.css'
 class Home extends Component{
     render(){
         return(
-            <div >
+            <div className='first_page'>
                 <MainCarousel/>
                 <DiscountCarousel/>
                 <Extraoff/>

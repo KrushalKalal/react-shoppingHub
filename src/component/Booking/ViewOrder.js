@@ -10,7 +10,7 @@ class ViewOrder extends Component{
         super(props)
 
         this.state={
-            orders:''
+            orders:[]
         }
     }
 

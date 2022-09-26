@@ -36,7 +36,7 @@ class WalletCarousel extends Component{
          console.log(this.state.wallet_img)
 
         return(
-            <div className='home_header'>
+            <div>
               <Carousel 
                        responsive={responsive}
                        swipeable={true}
