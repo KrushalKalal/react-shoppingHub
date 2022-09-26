@@ -87,3 +87,8 @@
     border: 1px solid var(--offerborder-color);
     margin-bottom: 40px;
 }
+
+.owl-item active{
+    width: 7% !important;
+    margin-right: 5px !important;
+  }

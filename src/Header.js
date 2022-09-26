@@ -106,7 +106,7 @@ conditionalHeader = () => {
         )
     }
     componentDidMount(){
-        
+    sessionStorage.setItem('loginStatus','LoggedOut')
       fetch(url,{
           method: 'GET',
           headers:{
