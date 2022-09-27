@@ -28,7 +28,7 @@ class Extraoff extends Component{
              <OwlCarousel items={3}  
                  className="owl-theme"  
                  loop  
-                 nav  
+                 dots={false}
                  margin={8} >  
                 {
                     this.state.extraoff_img.map(data => (

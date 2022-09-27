@@ -28,7 +28,7 @@ class Flatoff extends Component{
              <OwlCarousel items={3}  
                  className="owl-theme"  
                  loop  
-                 nav  
+                 dots={false}
                  margin={8} >  
                 {
                     this.state.flatoff_img.map(data => (
