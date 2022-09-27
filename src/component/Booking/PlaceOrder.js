@@ -72,7 +72,7 @@ class PlaceOrder extends Component{
         console.log(this.state.productId)
         if(sessionStorage.getItem('loginStatus') === 'LoggedOut'){
             return(
-                <div>
+                <div className='login_display'>
                     <center>
                         <h2>Login First To Place Order</h2>
                     </center>

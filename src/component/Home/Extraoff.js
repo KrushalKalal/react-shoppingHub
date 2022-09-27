@@ -22,7 +22,7 @@ class Extraoff extends Component{
          console.log(this.state.extraoff_img)
 
         return(
-            <section class="extra_offer_card">
+            <section class="extra_offer_card carousel_margin">
             <div className='offer-carousel'>
             {this.state.extraoff_img.length && (
              <OwlCarousel items={3}  
@@ -32,7 +32,7 @@ class Extraoff extends Component{
                  margin={8} >  
                 {
                     this.state.extraoff_img.map(data => (
-                        <div class="item offer_image">
+                        <div class="item offer_image" >
                         <Link to={`/listing/${data.brand_id}`} key={data._id}>
                           <img src={data.img} alt="extra off"/>
                         </Link>

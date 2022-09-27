@@ -36,7 +36,7 @@ class WalletCarousel extends Component{
          console.log(this.state.wallet_img)
 
         return(
-            <div>
+            <div className='carousel_margin'>
               <Carousel 
                        responsive={responsive}
                        swipeable={true}
@@ -47,7 +47,9 @@ class WalletCarousel extends Component{
                        autoPlaySpeed={3000}>
                 {
                     this.state.wallet_img.map(data => (
+                           <div className="carousel_img">
                           <img src={data.img} alt="discount_carousel"/>
+                          </div>
                        ))
                 }
               </Carousel>

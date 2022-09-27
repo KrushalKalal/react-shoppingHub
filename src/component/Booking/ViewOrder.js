@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 import OrderDisplay from './OrderDisplay'
+import './PlaceOrder.css'
 
 const oUrl = "https://shoppinghubapi.herokuapp.com/api/orderList"
 
@@ -17,7 +18,7 @@ class ViewOrder extends Component{
     render(){
         if(sessionStorage.getItem('loginStatus') === 'LoggedOut'){
             return(
-                <div>
+                <div className='login_display'>
 
                     <center>
                         <h2>Login First To Place Order</h2>

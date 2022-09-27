@@ -20,7 +20,7 @@ class CovetedBrand extends Component{
          console.log(this.state.coveted_img)
 
         return(
-            <section class="product_card">
+            <section class="product_card carousel_margin">
               <div>
                <h2>COVETED BRAND DEALS</h2>
               </div>

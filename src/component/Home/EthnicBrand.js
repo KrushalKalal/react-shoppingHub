@@ -20,7 +20,7 @@ class EthnicBrand extends Component{
          console.log(this.state.ethnic_img)
 
         return(
-            <section class="product_card">
+            <section class="product_card carousel_margin">
               <div>
                <h2>GRACEFUL ETHNICWEAR</h2>
               </div>

@@ -22,7 +22,7 @@ class Footwear extends Component{
          console.log(this.state.footwear_img)
 
         return(
-            <section class="footwear_card">
+            <section class="footwear_card carousel_margin">
             <div>
               <h2>FOOTWEAR MEETS FASHION</h2>
             </div>

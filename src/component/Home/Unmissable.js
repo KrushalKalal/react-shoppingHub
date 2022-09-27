@@ -22,7 +22,7 @@ class Unmissable extends Component{
          console.log(this.state.unmissable_img)
 
         return(
-            <section class="product_card">
+            <section class="product_card carousel_margin">
             <div>
               <h2>UNMISSABLE BRANDS THIS SEASON</h2>
             </div>

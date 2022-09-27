@@ -36,7 +36,7 @@ class MainCarousel extends Component{
          console.log(this.state.main_img)
 
         return(
-            <div className='home_header'>
+            <div className='home_header carousel_margin'>
               <Carousel 
                        responsive={responsive}
                        swipeable={true}
@@ -47,7 +47,7 @@ class MainCarousel extends Component{
                        autoPlaySpeed={3000}>
                 {
                     this.state.main_img.map(data => (
-                        <Link to={`/listing/${data.brand_id}`} key={data._id}>
+                        <Link to={`/listing/${data.brand_id}`} key={data._id} className="carousel_img">
                           <img src={data.img} alt="main_carousel" className="carousel_img"/>
                         </Link>
                         

@@ -36,7 +36,7 @@ class DiscountCarousel extends Component{
          console.log(this.state.discount_img)
 
         return(
-            <div>
+            <div className='carousel_margin'>
               <Carousel 
                        responsive={responsive}
                        swipeable={true}
@@ -47,7 +47,9 @@ class DiscountCarousel extends Component{
                        autoPlaySpeed={3000}>
                 {
                     this.state.discount_img.map(data => (
+                        <div className="carousel_img">
                           <img src={data.img} alt="discount_carousel"/>
+                        </div>  
                        ))
                 }
               </Carousel>

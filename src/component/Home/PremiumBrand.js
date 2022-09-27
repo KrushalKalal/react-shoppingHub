@@ -20,7 +20,7 @@ class PremiumBrand extends Component{
          console.log(this.state.premium_img)
 
         return(
-            <section class="premium_brands">
+            <section class="premium_brands carousel_margin">
               <div>
                <h2>STUNNING DEALS ON PREMIUM BRANDS</h2>
               </div>

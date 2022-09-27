@@ -20,7 +20,7 @@ class SummerCollection extends Component{
          console.log(this.state.summer_img)
 
         return(
-            <section class="product_card">
+            <section class="product_card carousel_margin">
               <div>
                <h2>FRESH SUMMER STYLES TO OWN</h2>
               </div>

@@ -22,7 +22,7 @@ class Flatoff extends Component{
          console.log(this.state.flatoff_img)
 
         return(
-            <section class="extra_offer_card">
+            <section class="extra_offer_card carousel_margin">
             <div className='offer-carousel'>
             {this.state.flatoff_img.length && (
              <OwlCarousel items={3}  
